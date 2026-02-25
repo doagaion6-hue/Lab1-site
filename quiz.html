@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Quiz Simplu</title>
+
+<script>
+function verifica() {
+
+  var raspuns = document.querySelector('input[name="q1"]:checked');
+
+  if (raspuns && raspuns.value == "Marte") {
+    document.getElementById("rezultat").innerHTML = "Corect ✅";
+  } else {
+    document.getElementById("rezultat").innerHTML = "Greșit ❌ (Răspuns corect: Marte)";
+  }
+
+  return false;
+}
+</script>
+
+</head>
+
+<body>
+
+<center>
+<h2>Quiz foarte simplu</h2>
+
+<form onsubmit="return verifica();">
+
+<p>Care este planeta roșie?</p>
+
+<input type="radio" name="q1" value="Venus"> Venus<br>
+<input type="radio" name="q1" value="Marte"> Marte<br>
+<input type="radio" name="q1" value="Jupiter"> Jupiter<br>
+
+<br>
+<input type="submit" value="Verifică">
+
+</form>
+
+<br>
+<div id="rezultat"></div>
+
+</center>
+
+</body>
+</html>
